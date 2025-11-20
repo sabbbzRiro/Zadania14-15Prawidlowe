@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz - Programowanie i Muzyka</title>
+    <style>
+        body {
+            background-color: #87CEFA;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularz o Programowaniu i Muzyce</h1>
+    <form action="mailto:mkryniew@wp.pl" method="post" enctype="text/plain">
+
+        <div class="form-group">
+            <label for="imie">Imię</label>
+            <input type="text" id="imie" name="imie" required>
+        </div>
+        <div class="form-group">
+            <label for="drugie-imie">Drugie imię</label>
+            <input type="text" id="drugie-imie" name="drugie">
+        </div>
+        <div class="form-group">
+            <label for="nazwisko">Nazwisko</label>
+            <input type="text" id="nazwisko" name="nazwisko" required>
+        </div>
+        <div class="form-group">
+            <label for="pseudonim">Pseudonim</label>
+            <input type="text" id="pseudonim" name="pseudonim">
+        </div>
+
+        <div class="form-group">
+            <label for="jezyk-programowania">Jaki jest Twуj ulubiony język programowania?</label>
+            <select id="jezyk-programowania" name="jezyk-programowania">
+                <option value="HTML">HTML</option>
+                <option value="Python">Python</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="SQL">SQL</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label>Jaki jest Twуj ulubiony styl muzyki?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="styl-muzyki" value="Hip Hop"> Hip Hop</label>
+                <label><input type="checkbox" name="styl-muzyki" value="Jazz"> Jazz</label>
+                <label><input type="checkbox" name="styl-muzyki" value="Rap"> Rap</label>
+                <label><input type="checkbox" name="styl-muzyki" value="Inne"> Inne</label>
+            </div>
+            <textarea name="inny-styl" placeholder="Jeśli wybrałeś Inne, podaj szczegуły..." maxlength="100"></textarea>
+        </div>
+
+
+        <div class="form-group">
+            <label>Czy umiesz programowacz?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="programowanie" value="Tak" required> Tak</label>
+                <label><input type="radio" name="programowanie" value="Nie"> Nie</label>
+<label><input type="radio" name="programowanie" value="Nie wiem"> Nie wiem</label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="czas">Podaj czas</label>
+            <input type="time" id="czas" name="czas">
+        </div>
+        <div class="form-group">
+            <label for="data">Podaj date</label>
+            <input type="date" id="data" name="data">
+        </div>
+        <div class="form-group">
+            <label for="kolor">Wybierz kolor</label>
+            <input type="color" id="kolor" name="kolor">
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Wyślij formularz</button>
+        </div>
+    </form>
+</body>
+</html>
